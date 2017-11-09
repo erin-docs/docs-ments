@@ -1,5 +1,7 @@
 connection: "red_flight"
 
+# e_flights_bb comment
+
 # include all the views
 include: "*.view"
 
