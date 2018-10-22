@@ -37,6 +37,15 @@ view: events {
     sql: ${TABLE}.created_at ;;
   }
 
+
+  dimension_group: customer_for_x_weeks {
+    type: duration
+    intervals: [week]
+    sql_start: ${TABLE}.created_at ;;
+    sql_end: now() ;;
+  }
+
+
   dimension: event_type {
     type: string
     sql: ${TABLE}.event_type ;;
