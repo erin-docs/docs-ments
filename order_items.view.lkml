@@ -35,7 +35,6 @@ view: order_items {
     sql: ${TABLE}.delivered_at ;;
   }
 
-
   dimension_group: days_to_deliver {
     type: duration
     intervals: [day]
@@ -43,6 +42,13 @@ view: order_items {
     sql_end: ${delivered_date};;
   }
 
+
+  dimension_group: days_since_delivered {
+    type: duration
+    intervals: [day]
+    sql_start: ${delivered_date} ;;
+    sql_end: now();;
+  }
 
 
   dimension: inventory_item_id {
