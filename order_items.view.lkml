@@ -47,7 +47,7 @@ view: order_items {
     type: duration
     intervals: [day]
     sql_start: ${delivered_date} ;;
-    sql_end: now();;
+    sql_end: CURRENT_DATE();;
   }
 
 
