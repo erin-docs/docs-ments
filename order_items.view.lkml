@@ -35,23 +35,139 @@ view: order_items {
     sql: ${TABLE}.delivered_at ;;
   }
 
-  dimension_group: days_to_deliver {
+# duration example using two existing time fields
+
+#   dimension_group: days_to_deliver {
+#     type: duration
+#     intervals: [day]
+#     sql_start: ${created_raw} ;;
+#     sql_end: ${delivered_raw};;
+#   }
+
+# duration example using current timestamp
+
+#   dimension_group: duration_since_delivered {
+#     type: duration
+#     intervals: []
+#     sql_start: ${delivered_raw} ;;
+#     sql_end: cast(current_timestamp as timestamp);;
+#   }
+
+
+
+  dimension_group: to_delivery {
     type: duration
-    intervals: [day]
-    sql_start: ${created_date} ;;
-    sql_end: ${delivered_date};;
+    datatype: epoch
+   convert_tz: yes
+  intervals: [day, hour]
+    sql_start: ${created_raw} ;;
+    sql_end: ${delivered_raw};;
+  }
+
+  dimension: number_of_days_to_delivery {
+    type: duration_day
+    datatype: date
+    convert_tz: yes
+    sql_start: ${created_raw} ;;
+    sql_end: ${delivered_raw};;
+  }
+
+  dimension: number_of_hours_to_delivery {
+    type: duration_day
+    datatype: timestamp
+    sql_start: ${created_raw} ;;
+    sql_end: ${delivered_raw};;
   }
 
 
-  dimension_group: days_since_delivered {
-    type: duration
-    intervals: [day]
-    sql_start: ${delivered_date} ;;
-    sql_end: current_timestamp;;
-  }
+dimension_group: test {
+type: time
+datatype: epoch
+convert_tz: yes
+}
+
+dimension: test {
+  type: duration_day
+  convert_tz: yes
+}
+filter: test_2 {
+  type: date
+  convert_tz: yes
+}
 
 
-  dimension: inventory_item_id {
+#
+#   dimension: number_of_minutes_to_delivery {
+#     type: duration_minute
+#     sql_start: ${created_raw} ;;
+#     sql_end: ${delivered_raw};;
+#   }
+#
+#
+#   dimension: number_of_months_to_delivery {
+#     type: duration_month
+#     sql_start: ${created_raw} ;;
+#     sql_end: ${delivered_raw};;
+#   }
+#
+#
+#   dimension: number_of_quarters_to_delivery {
+#     type: duration_quarter
+#     sql_start: ${created_raw} ;;
+#     sql_end: ${delivered_raw};;
+#   }
+#
+#
+#
+#
+#   dimension: number_of_secs_to_delivery {
+#     type: duration_second
+#     sql_start: ${created_raw} ;;
+#     sql_end: ${delivered_raw};;
+#   }
+#
+#
+#
+#   dimension: number_of_weeks_to_delivery {
+#     type: duration_week
+#     sql_start: ${created_raw} ;;
+#     sql_end: ${delivered_raw};;
+#   }
+#
+#
+#
+#   dimension: number_of_years_to_delivery {
+#     type: duration_year
+#     sql_start: ${created_raw} ;;
+#     sql_end: ${delivered_raw};;
+#   }
+#
+#
+#
+#   }
+
+
+#   dimension: days_since_delivered {
+#     type: duration_day
+#     sql_start: ${delivered_raw} ;;
+#     sql_end: cast(current_timestamp as timestamp);;
+#   }
+
+#   dimension_group: since_delivered_group {
+#     type: duration
+#     intervals: [day]
+#     sql_start: ${delivered_raw} ;;
+#     sql_end: cast(current_timestamp as timestamp);;
+#   }
+
+#   dimension_group: since_delivered {
+#     type: duration
+#     sql_start: ${delivered_raw} ;;
+#     sql_end: cast(current_timestamp as timestamp);;
+#   }
+
+
+ dimension: inventory_item_id {
     type: number
     # hidden: yes
     sql: ${TABLE}.inventory_item_id ;;
