@@ -3,6 +3,9 @@ connection: "thelook_events"
 # include all the views
 include: "*.view"
 
+include: "//e-commerce/inventory_items.view"
+
+
 datagroup: docs_ments_demo_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
@@ -12,7 +15,9 @@ datagroup: docs_ments_demo_default_datagroup {
 
 persist_with: docs_ments_demo_default_datagroup
 
-explore: distribution_centers {}
+explore: distribution_centers {
+  description: "Explore description"
+}
 
 explore: events {
   join: users {

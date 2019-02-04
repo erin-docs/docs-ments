@@ -1,4 +1,4 @@
-view: inventory_items {
+view: inventory_info {
   sql_table_name: public.inventory_items ;;
 
   dimension: id {

@@ -4,8 +4,9 @@ view: distribution_centers {
   sql_table_name: public.distribution_centers ;;
 
   dimension: id {
+    description: "test"
     primary_key: yes
-    hidden: yes
+    hidden: no
     type: number
     sql: ${TABLE}.id ;;
   }
