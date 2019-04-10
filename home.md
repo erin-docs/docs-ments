@@ -1,11 +1,5 @@
 
-<!--
-# Homepage
 
-Put your documentation here! Your text is rendered with [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown).
-
-Click the "Edit Source" button above to make changes.
--->
 <style>
   div.row h1 {
     padding-top: 100px;
@@ -37,30 +31,81 @@ Click the "Edit Source" button above to make changes.
 
   }
 
-  table {
+
+table, th, td {
+  border: 0px solid white;
   border-spacing: 5px;
-  border: 0px white;
+
 }
+
+div.column {
+  float: left;
+  width: 50%;
+}
+
+div.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 </style>
 
 
-<table border="0">
+
+<div class="row" style="display: table; clear: both;">
+  <div class="column" style="float: left;width: 50%;">
+
+<h1>Store Dashboards</h1>
+<ul>
+<li><div><a href="/dashboards/47"><p>Daily MI</p></a></div></li>
+<li><div><a href="/dashboards/62"><p>Customer Measure</p></a></div></li>
+<li><div><a href="/dashboards/33"><p>Colleague Report</p></a></div></li>
+<li><div><a href="/dashboards/59"><p>Customer Champion</p></a></div></li>
+<li><div><a href="/dashboards/58"><p>Doorstep Refunds</p></a></div></li>
+<li><div><a href="/dashboards/55"><p>Refunds Report</p></a></div></li>
+<li><div><a href="/dashboards/56"><p>Order Details</p></a></div></li>
+<li><div><a href="/dashboards/66"><p>Order Details Live</p></a></div></li>
+<li><div><a href="/dashboards/118"><p>Settlement Exceptions</p></a></div></li>
+<li><div><a href="/dashboards/61"><p>Orders with Settlement Total not equal to Till Total</p></a></div></li>
+</ul>
+ </div>
+  <div class="column" style="float: left;width: 50%;">
+
+<h1>Store Dashboards</h1>
+<ul>
+<li><div><a href="/dashboards/47"><p>Daily MI</p></a></div></li>
+<li><div><a href="/dashboards/62"><p>Customer Measure</p></a></div></li>
+<li><div><a href="/dashboards/33"><p>Colleague Report</p></a></div></li>
+<li><div><a href="/dashboards/59"><p>Customer Champion</p></a></div></li>
+<li><div><a href="/dashboards/58"><p>Doorstep Refunds</p></a></div></li>
+<li><div><a href="/dashboards/55"><p>Refunds Report</p></a></div></li>
+<li><div><a href="/dashboards/56"><p>Order Details</p></a></div></li>
+<li><div><a href="/dashboards/66"><p>Order Details Live</p></a></div></li>
+<li><div><a href="/dashboards/118"><p>Settlement Exceptions</p></a></div></li>
+<li><div><a href="/dashboards/61"><p>Orders with Settlement Total not equal to Till Total</p></a></div></li>
+</ul>
+  </div>
+</div>
+
+
+<table   style="border:0px;border-spacing: 5px;">
 <tr>
 <td>
 
 <center><h1>Store Dashboards</h1></center>
 <ul>
-<li><div><a href="/dashboards/47"><p>Daily MI</p></div></li>
-<li><div><a href="/dashboards/62"><p>Customer Measure</p></div></li>
-<li><div><a href="/dashboards/33"><p>Colleague Report</p></div></li>
-<li><div><a href="/dashboards/59"><p>Customer Champion</p></div></li>
-<li><div><a href="/dashboards/58"><p>Doorstep Refunds</p></div></li>
-<li><div><a href="/dashboards/55"><p>Refunds Report</p></div></li>
-<li><div><a href="/dashboards/56"><p>Order Details</p></div></li>
-<li><div><a href="/dashboards/66"><p>Order Details Live</p></div></li>
-<li><div><a href="/dashboards/118"><p>Settlement Exceptions</p></div></li>
-<li><div><a href="/dashboards/61"><p>Orders with Settlement Total not equal to Till Total</p></div></li>
+<li><div><a href="/dashboards/47"><p>Daily MI</p></a></div></li>
+<li><div><a href="/dashboards/62"><p>Customer Measure</p></a></div></li>
+<li><div><a href="/dashboards/33"><p>Colleague Report</p></a></div></li>
+<li><div><a href="/dashboards/59"><p>Customer Champion</p></a></div></li>
+<li><div><a href="/dashboards/58"><p>Doorstep Refunds</p></a></div></li>
+<li><div><a href="/dashboards/55"><p>Refunds Report</p></a></div></li>
+<li><div><a href="/dashboards/56"><p>Order Details</p></a></div></li>
+<li><div><a href="/dashboards/66"><p>Order Details Live</p></a></div></li>
+<li><div><a href="/dashboards/118"><p>Settlement Exceptions</p></a></div></li>
+<li><div><a href="/dashboards/61"><p>Orders with Settlement Total not equal to Till Total</p></a></div></li>
 </ul>
 
 </td>
@@ -72,16 +117,16 @@ Click the "Edit Source" button above to make changes.
 
 <center><h1>Store Dashboards</h1></center>
 <ul>
-<li><div><a href="/dashboards/47"><p>Daily MI</p></div></li>
-<li><div><a href="/dashboards/62"><p>Customer Measure</p></div></li>
-<li><div><a href="/dashboards/33"><p>Colleague Report</p></div></li>
-<li><div><a href="/dashboards/59"><p>Customer Champion</p></div></li>
-<li><div><a href="/dashboards/58"><p>Doorstep Refunds</p></div></li>
-<li><div><a href="/dashboards/55"><p>Refunds Report</p></div></li>
-<li><div><a href="/dashboards/56"><p>Order Details</p></div></li>
-<li><div><a href="/dashboards/66"><p>Order Details Live</p></div></li>
-<li><div><a href="/dashboards/118"><p>Settlement Exceptions</p></div></li>
-<li><div><a href="/dashboards/61"><p>Orders with Settlement Total not equal to Till Total</p></div></li>
+<li><div><a href="/dashboards/47"><p>Daily MI</p></a></div></li>
+<li><div><a href="/dashboards/62"><p>Customer Measure</p></a></div></li>
+<li><div><a href="/dashboards/33"><p>Colleague Report</p></a></div></li>
+<li><div><a href="/dashboards/59"><p>Customer Champion</p></a></div></li>
+<li><div><a href="/dashboards/58"><p>Doorstep Refunds</p></a></div></li>
+<li><div><a href="/dashboards/55"><p>Refunds Report</p></a></div></li>
+<li><div><a href="/dashboards/56"><p>Order Details</p></a></div></li>
+<li><div><a href="/dashboards/66"><p>Order Details Live</p></a></div></li>
+<li><div><a href="/dashboards/118"><p>Settlement Exceptions</p></a></div></li>
+<li><div><a href="/dashboards/61"><p>Orders with Settlement Total not equal to Till Total</p></a></div></li>
 </ul>
 
 
