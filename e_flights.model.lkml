@@ -1,7 +1,7 @@
 connection: "red_flight"
 
 # include all the views
-include: "*.view"
+include: "/**/*.view"
 
 datagroup: e_flights_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -29,5 +29,3 @@ explore: flights {}
 explore: flights_by_day {}
 
 explore: ontime {}
-
-explore: temp2 {}
