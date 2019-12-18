@@ -6,6 +6,7 @@ view: aircraft {
     sql: ${TABLE}.address1 ;;
   }
 
+#
   dimension: address2 {
     type: string
     sql: ${TABLE}.address2 ;;
