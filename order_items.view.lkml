@@ -46,20 +46,18 @@ view: order_items {
 
 # duration example using current timestamp
 
-#   dimension_group: duration_since_delivered {
-#     type: duration
-#     intervals: []
-#     sql_start: ${delivered_raw} ;;
-#     sql_end: cast(current_timestamp as timestamp);;
-#   }
+  dimension_group: duration_since_delivered {
+    type: duration
+    intervals: [minute,day]
+    sql_start: ${delivered_raw} ;;
+    sql_end: cast(current_timestamp as timestamp);;
+  }
 
 
 
   dimension_group: to_delivery {
-    type: duration
-    datatype: epoch
-   convert_tz: yes
-  intervals: [day, hour]
+   type: duration
+   intervals: []
     sql_start: ${created_raw} ;;
     sql_end: ${delivered_raw};;
   }
@@ -73,7 +71,14 @@ view: order_items {
   }
 
   dimension: number_of_hours_to_delivery {
-    type: duration_day
+    type: duration_hour
+    datatype: timestamp
+    sql_start: ${created_raw} ;;
+    sql_end: ${delivered_raw};;
+  }
+
+  dimension: number_of_seconds_to_delivery {
+    type: duration_second
     datatype: timestamp
     sql_start: ${created_raw} ;;
     sql_end: ${delivered_raw};;

@@ -24,6 +24,7 @@ view: events {
   }
 
   dimension_group: created {
+    description: "Testing"
     type: time
     timeframes: [
       raw,
