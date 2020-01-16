@@ -12,15 +12,15 @@ view: events {
     sql: ${TABLE}.browser ;;
   }
 
-  dimension: city {
-    type: string
-    sql: ${TABLE}.city ;;
-  }
-
   dimension: country {
     type: string
     map_layer_name: countries
     sql: ${TABLE}.country ;;
+  }
+
+  dimension: country_code {
+    type: string
+    sql: ${TABLE}.countrycode ;;
   }
 
   dimension_group: created {
