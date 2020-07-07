@@ -1,9 +1,9 @@
 connection: "thelook_events"
 
 # include all the views
-include: "*.view"
+include: "/views/*.view"
 
-include: "//e-commerce/inventory_items.view"
+# include: "//thelook/Views/inventory_items.view"
 
 
 datagroup: docs_ments_demo_default_datagroup {
@@ -27,10 +27,10 @@ explore: events {
   }
 }
 
-explore: inventory_items {
+explore: inventory_info {
   join: products {
     type: left_outer
-    sql_on: ${inventory_items.product_id} = ${products.id} ;;
+    sql_on: ${inventory_info.product_id} = ${products.id} ;;
     relationship: many_to_one
   }
 
@@ -48,15 +48,15 @@ explore: order_items {
     relationship: many_to_one
   }
 
-  join: inventory_items {
+  join: inventory_info {
     type: left_outer
-    sql_on: ${order_items.inventory_item_id} = ${inventory_items.id} ;;
+    sql_on: ${order_items.inventory_item_id} = ${inventory_info.id} ;;
     relationship: many_to_one
   }
 
   join: products {
     type: left_outer
-    sql_on: ${inventory_items.product_id} = ${products.id} ;;
+    sql_on: ${inventory_info.product_id} = ${products.id} ;;
     relationship: many_to_one
   }
 

@@ -4,8 +4,8 @@ connection: "red_flight"
 include: "/**/*.view"
 
 datagroup: e_flights_default_datagroup {
-  label: "ETL ID added"
-  description: "Triggered when a new ETL ID is added"
+  #label: "ETL ID added"
+  #description: "Triggered when a new ETL ID is added"
   sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
@@ -26,7 +26,13 @@ explore: cal454 {}
 
 explore: carriers {}
 
-explore: flights {}
+explore: flights {
+  query: predefined_query {
+    label: "GDIL"
+    dimensions: [dep_date, diverted]
+    measures: [count]
+  }
+}
 
 # explore: flights_by_day {}
 
