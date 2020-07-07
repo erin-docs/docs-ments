@@ -6,7 +6,6 @@ view: aircraft_models {
     sql: ${TABLE}.aircraft_category_id ;;
   }
 
-# comment to update
 
   dimension: aircraft_engine_type_id {
     type: number

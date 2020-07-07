@@ -1,4 +1,4 @@
-view: aircraft_renamed {
+view: aircraft {
   sql_table_name: public.aircraft ;;
 
   dimension: address1 {
@@ -6,7 +6,6 @@ view: aircraft_renamed {
     sql: ${TABLE}.address1 ;;
   }
 
-#
   dimension: address2 {
     type: string
     sql: ${TABLE}.address2 ;;
