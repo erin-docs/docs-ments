@@ -1,9 +1,9 @@
 connection: "red_flight"
 
-include: "/views/flights_by_day.view"
+include: "/views/flights_by_day.view.lkml"
 
 explore: flights_by_day {
-  view_name: flights_by_day
+from: flights_by_day
 }
 
 

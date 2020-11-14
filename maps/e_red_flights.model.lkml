@@ -3,6 +3,8 @@ connection: "red_flight"
 # include all the views
 include: "/**/*.view"
 
+# Update
+
 datagroup: e_flights_default_datagroup {
   label: "ETL ID added"
   description: "Triggered when a new ETL ID is added"

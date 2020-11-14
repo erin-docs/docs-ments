@@ -1,4 +1,4 @@
-view: aircraft {
+view: aircraft_renamed {
   sql_table_name: public.aircraft ;;
 
   dimension: address1 {
