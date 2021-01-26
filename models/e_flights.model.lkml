@@ -33,7 +33,7 @@ explore: carriers {
 explore: flights {
   query: predefined_query {
     label: "GDIL"
-    dimensions: [dep_date, diverted]
+    dimensions: [flight_num, diverted]
     measures: [count]
   }
 }
