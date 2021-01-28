@@ -26,11 +26,7 @@ explore: airports {}
 
 explore: cal454 {}
 
-explore: carriers {
-  # aggregate_table: test {
-  #   query: {}
-  # }
-}
+explore: carriers {}
 
 explore: flights {
   query: predefined_query {
