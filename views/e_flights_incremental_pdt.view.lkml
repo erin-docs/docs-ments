@@ -1,4 +1,4 @@
-view: e_flights_pdt_docsadvanced {
+view: e_flights_incremental_pdt {
 
   derived_table: {
     indexes: ["id"]

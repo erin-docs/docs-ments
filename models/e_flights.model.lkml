@@ -16,7 +16,10 @@ explore: accidents {
   description: "Accident report information"
 }
 
-explore: e_flights_pdt_docsadvanced {}
+
+explore: e_flights_incremental_pdt {}
+
+explore: e_flights_pdt {}
 
 explore: aircraft {}
 
