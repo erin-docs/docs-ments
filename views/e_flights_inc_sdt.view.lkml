@@ -17,7 +17,9 @@ view: e_flights_inc_sdt {
   dimension: id {}
   dimension: origin {}
   dimension_group: departure {
+    type: time
     timeframes: [raw, hour, date, week, month, year]
+    datatype: timestamp
     sql:  ${TABLE}.dep_time
     ;;
   }
