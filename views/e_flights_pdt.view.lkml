@@ -3,8 +3,6 @@ view: e_flights_pdt {
   derived_table: {
     indexes: ["id"]
     publish_as_db_view: yes
-    increment_key: "departure_time"
-    increment_offset: 1
     datagroup_trigger: e_flights_default_datagroup
     distribution_style: all
     explore_source: flights {
