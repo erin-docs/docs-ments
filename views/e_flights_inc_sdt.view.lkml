@@ -8,16 +8,18 @@ view: e_flights_inc_sdt {
     sql: SELECT
       flights.id2  AS "id",
       flights.origin  AS "origin",
-      DATE(flights.dep_time )  AS "departure_date"
+      DATE(flights.dep_time )  AS "departure"
       FROM public.flights  AS flights
-      WHERE {% incrementcondition %} departure_date {%  endincrementcondition %}
+      WHERE {% incrementcondition %} dep_time {%  endincrementcondition %}
           ;;
   }
 
-
   dimension: id {}
   dimension: origin {}
-  dimension: departure_date {
-    type: date
+  dimension_group: departure {
+    timeframes: [raw, hour, date, week, month, year]
+    datatype: timestamp
+    sql:  ${TABLE}.dep_time
+    ;;
   }
 }
