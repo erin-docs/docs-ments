@@ -2,7 +2,7 @@ include: "/models/e_flights.model"
 
 
 explore: +accidents {
-  aggregate_table: rollup__event_month__id__weather_condition {
+  aggregate_table: accidents_monthly {
     query: {
       dimensions: [event_month, id, weather_condition]
     }
