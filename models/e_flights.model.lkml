@@ -2,6 +2,7 @@ connection: "red_flight"
 
 # include all the views
 include: "/**/*.view"
+include: "/explores/*.lkml"
 
 datagroup: e_flights_default_datagroup {
   #label: "ETL ID added"
