@@ -11,17 +11,16 @@ view: e_flights_incremental_pdt {
       timezone: "America/Los_Angeles"
       column: id {}
       column: carrier {}
-      column: departure_time {}
-      column: departure_date {}
+      column: departure_raw {
+      }
       sorts: [flights.id: desc]
     }
   }
   dimension: id {}
   dimension: carrier {}
   dimension_group: departure {
-      type: time
-      timeframes: [raw, hour, date, week, month, year]
-      sql:  flights.dep_time
-        ;;
+    type: time
+    timeframes: [raw, date, month]
+    sql: ${TABLE}.departure_raw;;
   }
 }
