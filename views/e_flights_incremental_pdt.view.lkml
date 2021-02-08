@@ -18,10 +18,10 @@ view: e_flights_incremental_pdt {
   }
   dimension: id {}
   dimension: carrier {}
-  dimension: departure_date {
-    type: date
-  }
-    dimension: departure_time {
-      type: date_time
+  dimension_group: departure {
+      type: time
+      timeframes: [raw, hour, date, week, month, year]
+      sql:  ${TABLE}.dep_time
+        ;;
   }
 }
