@@ -8,11 +8,9 @@ view: e_flights_incremental_pdt {
     datagroup_trigger: e_flights_default_datagroup
     distribution_style: all
     explore_source: flights {
-      timezone: "America/Los_Angeles"
       column: id {}
       column: carrier {}
-      column: departure_raw {
-      }
+      column: departure_raw {}
       sorts: [flights.id: desc]
     }
   }
@@ -24,3 +22,9 @@ view: e_flights_incremental_pdt {
     sql: ${TABLE}.departure_raw;;
   }
 }
+
+
+# line 14: need to reference the departure date from the flgiths view
+# since dimension groups from the view aren't a dimention, you have to pick one of the timefreames from the dimention group, because the timeframes each are dimension
+
+# Now that. we have raw departure data in the explore source, we can do a new dimension group in the PDT using the raw data. need type: time
