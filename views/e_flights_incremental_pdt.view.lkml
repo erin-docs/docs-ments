@@ -21,7 +21,7 @@ view: e_flights_incremental_pdt {
   dimension_group: departure {
       type: time
       timeframes: [raw, hour, date, week, month, year]
-      sql:  ${TABLE}.dep_time
+      sql:  flights.dep_time
         ;;
   }
 }
