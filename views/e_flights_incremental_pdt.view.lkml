@@ -15,7 +15,9 @@ view: e_flights_incremental_pdt {
   dimension: id {
     type: number
   }
-  dimension: carrier {}
+  dimension: carrier {
+    type: string
+  }
   dimension_group: departure {
     type: time
     timeframes: [raw, date, month]
