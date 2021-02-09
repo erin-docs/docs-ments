@@ -2,7 +2,7 @@ view: e_flights_inc_sdt {
 
   derived_table: {
     datagroup_trigger: e_flights_default_datagroup
-    increment_key: "departure_date"
+    increment_key: "barf_hour"
     increment_offset: 3
     distribution_style: all
     sql: SELECT
@@ -14,13 +14,18 @@ view: e_flights_inc_sdt {
           ;;
   }
 
-  dimension: id {}
-  dimension: origin {}
-  dimension_group: departure {
+  dimension_group: dep {
     type: time
     timeframes: [raw, hour, date, week, month, year]
     datatype: timestamp
-    sql:  ${TABLE}.dep_time
+    sql:  ${TABLE}.departure
     ;;
   }
+  dimension: id {
+    type: number
+  }
+  dimension: origin {
+    type: string
+  }
+
 }
