@@ -2,7 +2,7 @@ view: e_flights_inc_sdt {
 
   derived_table: {
     datagroup_trigger: e_flights_default_datagroup
-    increment_key: "barf_hour"
+    increment_key: "dep_hour"
     increment_offset: 3
     distribution_style: all
     sql: SELECT

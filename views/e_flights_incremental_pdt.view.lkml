@@ -9,7 +9,6 @@ view: e_flights_incremental_pdt {
     explore_source: flights {
       column: id {}
       column: carrier {}
-      column: departure_raw {}
     }
   }
 
