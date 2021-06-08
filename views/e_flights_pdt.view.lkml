@@ -11,7 +11,6 @@ view: e_flights_pdt {
       column: carrier {}
       column: departure_time {}
       column: departure_date {}
-      column: departure_month {}
       sorts: [flights.id: desc]
     }
   }
