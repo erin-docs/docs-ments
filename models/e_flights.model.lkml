@@ -21,6 +21,8 @@ explore: e_flights_inc_sdt {}
 
 explore: e_flights_incremental_pdt {}
 
+explore: e_flights_materialized_view {}
+
 explore: e_flights_pdt {}
 
 explore: aircraft {}
